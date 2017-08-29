@@ -1,0 +1,149 @@
+GIT --> VCS --> To track changes in files/folders and to colloborate
+Types : Centrailized VCS and Distributed VCS
+
+working copy --> Repository
+working copy --> Repository ---> Repository
+
+GIT HUB --> (Website to upload your repository online)
+	--> provides backup on the cloud, visual interface to the repository, makes to colloborate(public/private)
+
+GIT != GITHUB  --> no relationship between GIT and GITHUB
+You can use GIT in GITHUB or BIT BUCKET Website
+
+Remote Repository --> clone/pull --> To your local system --> Working copy --> add --> commit to local repository --> push to remote repository
+Working Copy	
+
+Repository --> https://github.com/rarunraj84/TestGitHub.git
+git clone https://github.com/rarunraj84/TestGitHub.git
+
+git add will be in Staging area --> inbetween local and online repository
+git commit --> will be in the staging area 
+git push -u origin master
+git pull origin master
+
+git remote add origin https://github.com/rarunraj84/TestGitHub.git
+
+
+git bash --> Linux env
+
+GIT Tags/Releases
+create/show/publish/delete
+
+Tag --> specific point of the repository --> This is done for marking release points
+
+To create release point of the code --> use tags
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Creating Tags
+	1. Checkout the branch where you want to create the tag
+		git checkout branchname
+
+		git checkout master
+
+	2. Create tag with some name
+		git tag tagname
+		
+		git tag v1.0
+		
+		Annotated Tag
+			git tag -a v1.1 -m "Tag for release 1"
+			
+		git tag
+		V1.0 --> Lightweight Tag
+		v1.1 --> annotated tag --> contains informations --> stored as a git object in git repository
+		
+	3. Display Tag
+		git tag
+		git show TagName
+		
+	4. Push Tags to Remote
+		initaillay it will have 0 releases
+		
+		git push origin tagname
+		git push origin v1.0
+		
+		To push all tags at once
+		git push origin --tags
+		git push origin --tags 
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Install GIT
+2. Check the installation of GIT through command prompt git --version
+3. Add the project to git
+4. Git commands
+	
+	global properties (to avoid asking username and password)
+		git config --global user.email "rarunraj84@gmail.com"
+		git config --gloabl user.name "rarunraj84"
+		
+	git init
+	git status
+
+	git add
+	or 
+	git add .
+	
+	git commit -m "commiting index.html"
+	
+	git remote add origin https://github.com/rarunraj84/FirstRepo.git
+	
+	git push -u origin master
+		master is the branch name
+	
+	git log
+	git --help
+	
+5. Adding to remote repository
+
+6. Branching
+	create branch
+	checkout branch
+	merge branch to master
+	delete branch (local and remote)
+	
+	Create branch
+		git branch "branch name"
+		
+	Checkout branch
+		git checkout "branch name"
+		
+		git push -u origin MyNewBranch
+	
+	Merge new branch in master branch 
+		(before merging checkout the target branch)
+		git merge "branch name"
+	
+		git push -u origin master
+	
+		This branch is even with master.
+		
+	Delete Branch
+		git branch -d branchname  (delete only from local)
+		git push origin --delete branchname (delete from remote)
+
+https://github.com/rarunraj84/FirstRepo.git
+
+github is a website on the cloud
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+git push
+git pull
+
+Bare repository
+
+
+git log
+git status
+git branch --> To know the active branch
+git branch Branch Name --> To create the new branch name
+git checkout Branch Name --> To switch the branch name
+git branch -d Branch Name --> To delete the Branch
+git branch -d Branch Name --> To force delete the Branch
+git merge Branch Name --> To merge the child branch to main branch (before that swith to main branch where you are committing)
+
+git diff
+git commit filename -m "messages"
